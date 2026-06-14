@@ -4,13 +4,13 @@ A Chrome extension that enhances WhatsApp Web with powerful tools to download me
 
 ## Features
 
-- ** Photo & Video Download** — Select individual photos/videos from a chat and download them as a ZIP archive
-- ** Chat Export** — Export chat messages by date range as a formatted text file in a ZIP archive
-- ** Album Extraction** — Automatically expands and downloads WhatsApp album (multi-photo) messages
-- ** Date Range Filtering** — Filter messages by date before exporting
-- ** Chat Preview** — Preview messages in WhatsApp-style bubbles before exporting
-- ** Auto-Scan** — Automatically scans the active chat and loads older messages by scrolling up
-- ** WhatsApp Dark Theme** — UI styled to match WhatsApp Web's native design language
+- Photo & Video Download — Select individual photos/videos from a chat and download them as a ZIP archive
+- Chat Export — Export chat messages by date range as a formatted text file in a ZIP archive
+- Album Extraction — Automatically expands and downloads WhatsApp album (multi-photo) messages
+- Date Range Filtering — Filter messages by date before exporting
+- Chat Preview — Preview messages in WhatsApp-style bubbles before exporting
+- Auto-Scan — Automatically scans the active chat and loads older messages by scrolling up
+- WhatsApp Dark Theme — UI styled to match WhatsApp Web's native design language
 
 ## Installation
 
@@ -18,16 +18,16 @@ A Chrome extension that enhances WhatsApp Web with powerful tools to download me
 
 1. **Clone or download** this repository:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/whatsapp-assistant.git
+   [git clone https://github.com/darshan-200710/Whatsapp-Assistant.git]
    ```
 
-2. **Open Chrome** and go to `chrome://extensions/`
+2. Open Chrome and go to `chrome://extensions/`
 
-3. **Enable Developer Mode** (toggle in the top-right corner)
+3. Enable Developer Mode (toggle in the top-right corner)
 
-4. Click **Load unpacked** and select the extension folder
+4. Click Load unpacked and select the extension folder
 
-5. **Open** [web.whatsapp.com](https://web.whatsapp.com) — you'll see a green toggle button on the right edge
+5. Open [web.whatsapp.com](https://web.whatsapp.com) — you'll see a green toggle button on the right edge
 
 ## Usage
 
