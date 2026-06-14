@@ -1,0 +1,648 @@
+#wa-assistant-toggle {
+  position: fixed !important;
+  right: 0 !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 99999 !important;
+  background: #00a884 !important;
+  border: none !important;
+  border-radius: 50% 0 0 50% !important;
+  width: 40px !important;
+  height: 48px !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 20px !important;
+  box-shadow: -2px 0 12px rgba(0, 168, 132, 0.35) !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  color: #fff !important;
+  writing-mode: initial !important;
+  padding: 0 !important;
+}
+
+#wa-assistant-toggle:hover {
+  width: 46px !important;
+  box-shadow: -4px 0 20px rgba(0, 168, 132, 0.5) !important;
+  background: #06cf9c !important;
+}
+
+/* ── Sidebar panel ──
+   WhatsApp Web's dark sidebar panel design */
+#wa-assistant-sidebar {
+  position: fixed !important;
+  right: -430px !important;
+  top: 0 !important;
+  height: 100vh !important;
+  width: 420px !important;
+  z-index: 99998 !important;
+  background: #111b21 !important;
+  border-left: 1px solid rgba(233, 237, 239, 0.08) !important;
+  box-shadow: -8px 0 32px rgba(0, 0, 0, 0.5) !important;
+  transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, 'Lucida Grande', Arial, 'Ubuntu', 'Cantarell', 'Fira Sans', sans-serif !important;
+  font-size: 14px !important;
+  color: #e9edef !important;
+  box-sizing: border-box !important;
+}
+
+#wa-assistant-sidebar.open {
+  right: 0 !important;
+}
+
+/* All children: reset box-sizing */
+#wa-assistant-sidebar *,
+#wa-assistant-sidebar *::before,
+#wa-assistant-sidebar *::after {
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: inherit !important;
+}
+
+/* ── Header ──
+   WhatsApp Web header bar style */
+.waa-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 12px 16px !important;
+  background: #202c33 !important;
+  border-bottom: 1px solid rgba(233, 237, 239, 0.08) !important;
+  flex-shrink: 0 !important;
+  min-height: 56px !important;
+}
+
+.waa-brand {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+
+.waa-logo {
+  width: 32px !important;
+  height: 32px !important;
+  background: #00a884 !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 16px !important;
+}
+
+.waa-title {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: #e9edef !important;
+}
+
+.waa-close {
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 50% !important;
+  border: none !important;
+  background: transparent !important;
+  color: #8696a0 !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 20px !important;
+  transition: background 0.15s !important;
+}
+
+.waa-close:hover { background: #2a3942 !important; color: #e9edef !important; }
+
+/* ── Tabs ──
+   WhatsApp Web tab style */
+.waa-tabs {
+  display: flex !important;
+  background: #202c33 !important;
+  border-bottom: 1px solid rgba(233, 237, 239, 0.08) !important;
+  flex-shrink: 0 !important;
+}
+
+.waa-tab {
+  flex: 1 !important;
+  padding: 12px 8px !important;
+  border: none !important;
+  background: transparent !important;
+  color: #8696a0 !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  border-bottom: 2px solid transparent !important;
+  transition: all 0.15s !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+}
+
+.waa-tab:hover { color: #e9edef !important; background: #2a3942 !important; }
+.waa-tab.active { color: #00a884 !important; border-bottom-color: #00a884 !important; }
+
+/* ── Chat info bar ──
+   WhatsApp Web contact info header style */
+.waa-chat-bar {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  padding: 10px 16px !important;
+  background: #202c33 !important;
+  border-bottom: 1px solid rgba(233, 237, 239, 0.08) !important;
+  flex-shrink: 0 !important;
+  min-height: 56px !important;
+}
+
+.waa-chat-avatar {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  background: #2a3942 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 18px !important;
+  font-weight: 400 !important;
+  color: #8696a0 !important;
+  flex-shrink: 0 !important;
+  overflow: hidden !important;
+}
+
+.waa-chat-avatar img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 50% !important;
+}
+
+.waa-chat-name {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  color: #e9edef !important;
+  line-height: 1.2 !important;
+}
+
+.waa-chat-sub {
+  font-size: 12px !important;
+  color: #8696a0 !important;
+  margin-top: 2px !important;
+}
+
+/* ── Empty states / prompts ──
+   WhatsApp Web empty state style */
+.waa-scan-prompt {
+  flex: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 14px !important;
+  padding: 30px 20px !important;
+  text-align: center !important;
+}
+
+.waa-scan-icon { font-size: 52px !important; }
+.waa-scan-title { font-size: 16px !important; font-weight: 500 !important; color: #e9edef !important; }
+.waa-scan-sub   { font-size: 13px !important; color: #8696a0 !important; line-height: 1.6 !important; max-width: 280px !important; }
+
+/* ── PHOTOS PANEL ──
+   WhatsApp Web panel design */
+.waa-panel { display: none !important; flex-direction: column !important; flex: 1 !important; overflow: hidden !important; }
+.waa-panel.active { display: flex !important; }
+
+/* Toolbar */
+.waa-toolbar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 8px 12px !important;
+  background: #111b21 !important;
+  border-bottom: 1px solid rgba(233, 237, 239, 0.06) !important;
+  flex-shrink: 0 !important;
+  gap: 8px !important;
+}
+
+.waa-toolbar-left {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+.waa-btn-sm {
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  padding: 6px 12px !important;
+  border-radius: 8px !important;
+  border: none !important;
+  background: #2a3942 !important;
+  color: #d1d7db !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  transition: all 0.15s !important;
+  white-space: nowrap !important;
+}
+
+.waa-btn-sm:hover { background: #36454f !important; }
+
+.waa-sel-info { font-size: 12px !important; color: #667781 !important; }
+.waa-sel-info strong { color: #00a884 !important; font-weight: 600 !important; }
+
+.waa-btn-dl {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 7px 18px !important;
+  border-radius: 24px !important;
+  border: none !important;
+  background: #00a884 !important;
+  color: #fff !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.2s !important;
+  white-space: nowrap !important;
+}
+
+.waa-btn-dl:hover { background: #06cf9c !important; }
+.waa-btn-dl:disabled { opacity: 0.5 !important; cursor: not-allowed !important; background: #2a3942 !important; color: #667781 !important; }
+
+/* ── Photo grid ──
+   WhatsApp Web media gallery style */
+.waa-photo-grid-wrap {
+  flex: 1 !important;
+  overflow-y: auto !important;
+  padding: 8px !important;
+  scrollbar-width: thin !important;
+  scrollbar-color: rgba(134, 150, 160, 0.2) transparent !important;
+}
+
+.waa-photo-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 4px !important;
+}
+
+.waa-photo-card {
+  position: relative !important;
+  aspect-ratio: 1 !important;
+  overflow: hidden !important;
+  cursor: pointer !important;
+  border: 2px solid transparent !important;
+  transition: all 0.15s !important;
+  background: #202c33 !important;
+}
+
+.waa-photo-card:hover { 
+  filter: brightness(1.15) !important;
+}
+
+.waa-photo-card.selected {
+  border-color: #00a884 !important;
+}
+
+.waa-photo-card img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+.waa-photo-card video {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+.waa-photo-check {
+  position: absolute !important;
+  top: 6px !important;
+  right: 6px !important;
+  width: 22px !important;
+  height: 22px !important;
+  border-radius: 50% !important;
+  border: 2px solid rgba(255, 255, 255, 0.6) !important;
+  background: rgba(0, 0, 0, 0.5) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 12px !important;
+  transition: all 0.15s !important;
+  color: transparent !important;
+}
+
+.waa-photo-card.selected .waa-photo-check {
+  background: #00a884 !important;
+  border-color: #00a884 !important;
+  color: #fff !important;
+}
+
+.waa-photo-type-badge {
+  position: absolute !important;
+  bottom: 4px !important;
+  left: 4px !important;
+  background: rgba(0, 0, 0, 0.7) !important;
+  border-radius: 4px !important;
+  padding: 2px 5px !important;
+  font-size: 10px !important;
+  color: #e9edef !important;
+}
+
+/* ── Empty states ──
+   WhatsApp Web empty state */
+.waa-empty {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  padding: 50px 20px !important;
+  text-align: center !important;
+  color: #8696a0 !important;
+}
+
+.waa-empty-icon { font-size: 48px !important; opacity: 0.5 !important; }
+.waa-empty-title { font-size: 15px !important; font-weight: 500 !important; color: #e9edef !important; }
+.waa-empty-sub { font-size: 13px !important; line-height: 1.5 !important; max-width: 260px !important; color: #667781 !important; }
+
+/* ── CHAT EXPORT PANEL ──
+   WhatsApp Web settings/config style */
+.waa-export-config {
+  padding: 14px 16px !important;
+  background: #111b21 !important;
+  border-bottom: 1px solid rgba(233, 237, 239, 0.06) !important;
+  flex-shrink: 0 !important;
+}
+
+.waa-config-title {
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  color: #e9edef !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  margin-bottom: 12px !important;
+}
+
+.waa-date-row {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 10px !important;
+  margin-bottom: 12px !important;
+}
+
+.waa-field-group {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+}
+
+.waa-field-label {
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  color: #8696a0 !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+}
+
+.waa-field-input {
+  background: #2a3942 !important;
+  border: 1px solid rgba(233, 237, 239, 0.08) !important;
+  border-radius: 8px !important;
+  color: #e9edef !important;
+  font-size: 13px !important;
+  padding: 8px 10px !important;
+  outline: none !important;
+  width: 100% !important;
+  transition: border-color 0.15s !important;
+  font-family: inherit !important;
+}
+
+.waa-field-input:focus { border-color: #00a884 !important; }
+.waa-field-input::-webkit-calendar-picker-indicator { filter: invert(0.8) !important; cursor: pointer !important; }
+
+.waa-export-pills {
+  display: flex !important;
+  gap: 6px !important;
+  flex-wrap: wrap !important;
+  margin-bottom: 12px !important;
+}
+
+.waa-pill {
+  display: flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  padding: 5px 12px !important;
+  border-radius: 16px !important;
+  border: 1px solid rgba(233, 237, 239, 0.08) !important;
+  background: #2a3942 !important;
+  color: #8696a0 !important;
+  font-size: 12px !important;
+  cursor: pointer !important;
+  transition: all 0.15s !important;
+  user-select: none !important;
+}
+
+.waa-pill:hover { 
+  background: #36454f !important; 
+  border-color: rgba(233, 237, 239, 0.12) !important;
+}
+.waa-pill.on { 
+  border-color: #00a884 !important; 
+  background: rgba(0, 168, 132, 0.1) !important; 
+  color: #00a884 !important; 
+}
+
+.waa-export-actions {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+.waa-msg-count { font-size: 12px !important; color: #667781 !important; margin-left: auto !important; }
+.waa-msg-count strong { color: #00a884 !important; font-weight: 600 !important; }
+
+.waa-btn-export {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 8px 18px !important;
+  border-radius: 24px !important;
+  border: none !important;
+  background: #00a884 !important;
+  color: #fff !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.2s !important;
+}
+
+.waa-btn-export:hover { background: #06cf9c !important; }
+.waa-btn-export:disabled { opacity: 0.5 !important; cursor: not-allowed !important; background: #2a3942 !important; color: #667781 !important; }
+
+/* ── Chat preview ──
+   WhatsApp Web chat background & bubble style */
+.waa-chat-preview {
+  flex: 1 !important;
+  overflow-y: auto !important;
+  padding: 16px 24px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+  scrollbar-width: thin !important;
+  scrollbar-color: rgba(134, 150, 160, 0.2) transparent !important;
+  background: #0b141a !important;
+}
+
+/* WhatsApp Web date separator pill */
+.waa-date-pill {
+  align-self: center !important;
+  background: #182229 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 5px 12px !important;
+  font-size: 12px !important;
+  color: #8696a0 !important;
+  font-weight: 400 !important;
+  margin: 8px 0 !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* WhatsApp Web message bubbles */
+.waa-msg {
+  max-width: 82% !important;
+  padding: 6px 10px 6px 10px !important;
+  font-size: 13.5px !important;
+  line-height: 1.45 !important;
+  word-break: break-word !important;
+  position: relative !important;
+  color: #e9edef !important;
+}
+
+/* Outgoing message — WhatsApp Web green bubble */
+.waa-msg.mine {
+  align-self: flex-end !important;
+  background: #005c4b !important;
+  border-radius: 8px 2px 8px 8px !important;
+  margin-left: auto !important;
+}
+
+/* Incoming message — WhatsApp Web grey bubble */
+.waa-msg.theirs {
+  align-self: flex-start !important;
+  background: #202c33 !important;
+  border-radius: 2px 8px 8px 8px !important;
+}
+
+/* Timestamp inside bubble */
+.waa-msg-time {
+  font-size: 11px !important;
+  color: rgba(255, 255, 255, 0.45) !important;
+  margin-top: 4px !important;
+  text-align: right !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 4px !important;
+}
+
+/* Sender name label */
+.waa-msg-sender {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  color: #00a884 !important;
+  margin-bottom: 2px !important;
+}
+
+/* ── Progress bar ──
+   WhatsApp Web progress indicator */
+.waa-progress {
+  display: none !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+  padding: 10px 16px !important;
+  background: #202c33 !important;
+  border-top: 1px solid rgba(233, 237, 239, 0.08) !important;
+  flex-shrink: 0 !important;
+}
+
+.waa-progress.show { display: flex !important; }
+
+.waa-progress-lbl {
+  font-size: 12px !important;
+  color: #8696a0 !important;
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
+.waa-progress-lbl strong { color: #00a884 !important; font-weight: 600 !important; }
+
+.waa-progress-bg {
+  height: 4px !important;
+  background: rgba(134, 150, 160, 0.15) !important;
+  border-radius: 2px !important;
+  overflow: hidden !important;
+}
+
+.waa-progress-fill {
+  height: 100% !important;
+  background: #00a884 !important;
+  border-radius: 2px !important;
+  transition: width 0.25s ease !important;
+  width: 0% !important;
+}
+
+/* ── Toast / Snackbar ──
+   WhatsApp Web snackbar style */
+.waa-toast-wrap {
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 440px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+  z-index: 999999 !important;
+  pointer-events: none !important;
+}
+
+.waa-toast {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 10px !important;
+  background: #202c33 !important;
+  border: 1px solid rgba(233, 237, 239, 0.08) !important;
+  border-radius: 8px !important;
+  padding: 10px 14px !important;
+  max-width: 320px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+  pointer-events: all !important;
+  animation: waaSlideIn 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  color: #e9edef !important;
+}
+
+.waa-toast.success { border-left: 3px solid #00a884 !important; }
+.waa-toast.error   { border-left: 3px solid #ef5350 !important; }
+.waa-toast.info    { border-left: 3px solid #00a884 !important; }
+.waa-toast.warn    { border-left: 3px solid #ffd700 !important; }
+
+.waa-toast-icon { font-size: 18px !important; flex-shrink: 0 !important; }
+.waa-toast-title { font-size: 13px !important; font-weight: 600 !important; margin-bottom: 2px !important; }
+.waa-toast-msg   { font-size: 12px !important; color: #8696a0 !important; line-height: 1.4 !important; }
+
+@keyframes waaSlideIn {
+  from { transform: translateX(60px); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+
+@keyframes waaFadeOut {
+  from { transform: translateX(0);    opacity: 1; }
+  to   { transform: translateX(60px); opacity: 0; }
+}
